@@ -1,0 +1,20 @@
+connect using SSH command:
+sshpass -p "DevOps321" ssh centos@54.221.168.233 -C "echo hello > /tmp/hello.txt"
+
+Ping using Ansble command:
+
+ansible -i 54.221.168.233, all -e ansible_user=centos -e ansible_password=DevOps321 -m ping
+ansible -i 54.221.168.233, all -e ansible_user=centos -e ansible_password=DevOps321 --become -m yum -a "name=nginx state=present"
+
+List the hosts on inventory files:
+
+ansible -i inventory.ini all --list-hosts
+ansible -i inventory.ini cart --list-hosts
+ansible -i inventory.ini web --list-hosts
+ansible -i inventory.ini ungrouped --list-hosts
+
+execute ansible play book:
+
+ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
+ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 02-playbook.yaml
+
