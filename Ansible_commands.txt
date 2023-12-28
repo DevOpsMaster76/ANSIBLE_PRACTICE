@@ -1,3 +1,7 @@
+To install ansible:
+=====================
+sudo yum install ansible -y 
+
 connect using SSH command:
 sshpass -p "DevOps321" ssh centos@54.221.168.233 -C "echo hello > /tmp/hello.txt"
 
@@ -17,4 +21,41 @@ execute ansible play book:
 
 ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
 ansible-playbook -i inventory.ini -e ansible_user=centos -e ansible_password=DevOps321 02-playbook.yaml
+
+==========
+
+docs.ansible.com (ansible documentation)
+
+============================
+
+installing roboshop using Ansible:
+creating instances and records using shell script, pre checks few records need to keep(needto verify), allow roll to running instance.
+After that create yamlsfor all modules.
+
+================================
+roboshop through ansible.
+
+cataloug == cart
+
+=================
+
+Ansible roles:
+--------------
+
+A proper directory structure to keep our configuration which can be shared this with other users
+
+common alsoa role where you can keep all
+
+Ansible 
+Tasks
+files
+templates
+vars
+handlers
+
+nodejs
+java
+python
+go
+
 
